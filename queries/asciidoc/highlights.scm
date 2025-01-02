@@ -287,7 +287,7 @@
   (table_cell_marker)
 ] @character
 
-(hardbreak) @character.special
+(hardbreak) @character
 
 [
   (include_tag)
@@ -396,6 +396,7 @@
   (list_box)
   (block_continuation)
   (encoded_symbol)
+  (description_list_marker)
 ] @character @nospell
 
 [
@@ -424,6 +425,11 @@
   (attr_value)
   (paragraph)
 ] @spell
+
+[
+ (image_marker)
+ (image_inline_marker)
+] @image
 
 [
   (ERROR)
