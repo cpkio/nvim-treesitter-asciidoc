@@ -1,7 +1,7 @@
 = Neovim plugin for tree-sitter-asciidoc
 
 git clone this repo to your plugins folder
-(`nvim-data/site/pack/user/start/tree-sitter-asciidoc`), start Neovim and do
+(`%XDG_DATA_HOME%/nvim-data/site/pack/user/start/` on Windows), start Neovim and do
 `:TSInstall asciidoc`.
 
 Asciidoc grammar file should appear in `nvim-treesitter` plugin folder.
