@@ -1,5 +1,34 @@
 = Neovim plugin for tree-sitter-asciidoc
 
+== Repo archived
+
+I've moved to `main` branch of `nvim-treesitter`. `main` branch now does not
+require this plugin anymore. To set up custom parser with `main`, use this
+in your Lua config:
+
+.Custom parser snippet
+====
+[source,lua]
+----
+vim.api.nvim_create_autocmd('User', {
+    pattern = 'TSUpdate',
+    callback = function()
+        require("nvim-treesitter.parsers").asciidoc = {
+          install_info = {
+            url = "https://github.com/cpkio/tree-sitter-asciidoc",
+            revision = "0adab3201e5fc85cc2eb1d5772a976da27689422"
+          },
+          tier = 2
+        }
+    end,
+  })
+----
+====
+
+and use `:TSInstall asciidoc`.
+
+== Old
+
 git clone this repo to your plugins folder
 (`%XDG_DATA_HOME%/nvim-data/site/pack/user/start/` on Windows), start Neovim and do
 `:TSInstall asciidoc`.
